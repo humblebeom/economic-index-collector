@@ -17,8 +17,7 @@ if __name__ == '__main__':
     my_github_token = os.getenv("MY_GITHUB_TOKEN")
 
     seoul_timezone = timezone('Asia/Seoul')
-    today = datetime(year=2022, month=11, day=14)
-    # today = datetime.now(seoul_timezone)
+    today = datetime.now(seoul_timezone)
     today_date = today.strftime("%Y%m%d")
 
     krx_endpoint = "http://data-dbg.krx.co.kr/svc/apis/idx/"
