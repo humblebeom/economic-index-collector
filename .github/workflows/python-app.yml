@@ -22,5 +22,4 @@ jobs:
         python main.py
       env:
         MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-        KRX_API_ENDPOINT: ${{ secrets.KRX_API_ENDPOINT }}
         KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
