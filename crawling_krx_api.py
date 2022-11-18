@@ -67,14 +67,14 @@ def aggregate(*args):
     return mcap, trd_val, trd_val / mcap
 
 
-def make_content(today: datetime, data: Tuple[float]) -> str:
+def make_title(today: datetime, data: Tuple[float]) -> str:
     mcap = data[0]
     trd_val = data[1]
     ratio = data[2]
     trillion = 1_000_000_000_000
-    contents = f"[{today.strftime('%Y년 %m월 %d일')}] KOSPI & KOSDAQ " \
-               f"시가총액(krw): {mcap / trillion:.1f} 조, " \
-               f"거래대금(krw): {trd_val / trillion:.1f} 조, " \
-               f"거래대금/시가총액 비율: {ratio * 100:.2f} %\n"
+    contents = f"[{today.strftime('%Y-%m-%d')}] KOSPI, KOSDAQ " \
+               f"시총(KRW): {mcap / trillion:.1f} 조, " \
+               f"거래대금(KRW): {trd_val / trillion:.1f} 조, " \
+               f"거래대금/시총: {ratio * 100:.2f} %\n"
 
     return contents
