@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pytz import timezone
 from dotenv import dotenv_values
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     my_github_token = os.getenv("MY_GITHUB_TOKEN")
 
     seoul_timezone = timezone('Asia/Seoul')
-    today = datetime.now(seoul_timezone)
+    today = datetime.now(seoul_timezone) - timedelta(days=1)
     today_date = today.strftime("%Y%m%d")
 
     krx_endpoint = "http://data-dbg.krx.co.kr/svc/apis/idx/"
