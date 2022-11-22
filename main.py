@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     krx_crawler = KRXCrawler(today_str)
     kospi_df = krx_crawler.run("02")
-    kosdaq_df = krx_crawler.run("02")
+    kosdaq_df = krx_crawler.run("03")
     if kospi_df.empty and kosdaq_df.empty:
         issue_title = f"[{today.strftime('%Y-%m-%d')}] 증시휴장일"
     else:
